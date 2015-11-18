@@ -1,11 +1,15 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
+<head>
+  <meta charset="UTF-8">
+</head>
 <body>
 
-<table>
+
+<table  style="margin: 0 auto;">
   <tr>
     <td>
-      Participantes: <input type="text" id="max" value="10">
+      Página que generará enteros entre 1 y  <input type="text" id="max" value="10">
     </td>
     <td>
       <button onclick="generarAleatorio()">Generar!</button>
@@ -13,10 +17,9 @@
   </tr>
 </table>
 
-<p id="participantes">
 
-</p>
 <p id="numero" style="
+    margin: 0 auto;
     width: 290px;
     font-size:  -webkit-xxx-large;
     font-family: fantasy;
@@ -25,8 +28,9 @@
 
 <script>
 function generarAleatorio() {
-    var x = document.getElementById("numero")
+    var x = document.getElementById("numero");
     var max = parseInt(document.getElementById("max").value);
+
     x.innerHTML = Math.floor((Math.random() * max) + 1);
 }
 </script>
